@@ -1,0 +1,13 @@
+{
+  "auth": {
+    "Email": "Email",
+    "Get's Started": "Get's Started",
+    "Don't have an account": "Don't have an account",
+    "Or login with email": "or login with email",
+    "Password": "Password",
+    "Remember me": "Remember me",
+    "Forgot your password": "Forgot your password",
+    "Sign in": "Sign in",
+    "Your email": "Your email"
+  }
+}

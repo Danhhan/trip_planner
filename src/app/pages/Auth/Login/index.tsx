@@ -1,10 +1,15 @@
 import React from 'react'
+// Components
+import Input from '@/app/components/Input'
+import AuthWrapper from '../AuthWrapper'
 
 const LoginPage: React.FC = () => {
   return (
-    <>
-      <p className="text-center text-purple-600">Login page</p>
-    </>
+    <AuthWrapper>
+      <div>
+        <Input />
+      </div>
+    </AuthWrapper>
   )
 }
 
