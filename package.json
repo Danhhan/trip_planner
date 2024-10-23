@@ -1,7 +1,7 @@
 {
   "name": "trip_planner",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -29,6 +29,7 @@
     "styled-components": "^5.3.11"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.9",
     "@pancakeswap/eslint-config-pancake": "^1.2.0",
     "@types/node": "^20.2.5",
     "@types/react": "^18.0.37",
