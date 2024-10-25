@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check for [skip ci]
+        run: |
+          if git log -1 --pretty=%B | grep -iq '\[skip ci\]'; then
+            echo "Skipping CI as requested by commit message"
+            exit 0
+          fi
+      - run: yarn install
+      - name: Set up Git config
+        run: |
+          git config --global user.email "hanminhdanh1325@gmail.com"
+          git config --global user.name "Tavi Castro"
+
+      - run: |
+          npx standard-version --no-verify --message "chore(release): [skip ci]"
+      - run: git push --follow-tags origin develop

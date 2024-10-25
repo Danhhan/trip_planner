@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .fh1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+  }
+  .f20Medium {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .f30Medium {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+  }
+}

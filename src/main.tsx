@@ -6,6 +6,8 @@ import Providers from './Providers'
 import { configureAppStore } from './store/configureStore'
 import { GlobalStyle } from './styles/global-styles'
 
+import './locales/i18n'
+
 const store = configureAppStore()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -16,3 +18,11 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   </Providers>
   // </React.StrictMode>
 )
+
+// Hot reloadable translation json files
+if (import.meta.hot) {
+  // eslint-disable-next-line @typescript-eslint/no-extra-semi
+  import.meta.hot.accept(['./'], () => {
+    // No need to render the App again because i18next works with the hooks
+  })
+}

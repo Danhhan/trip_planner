@@ -33,7 +33,7 @@ export default defineConfig({
       '@/components': path.resolve(__dirname, './src/app/components'),
       '@/public/*': path.resolve(__dirname, './public/*'),
       '@/fake-data': path.resolve(__dirname, './src/fake-data'),
-      '@/apis': path.resolve(__dirname, './src/apis'),
+      '@/services': path.resolve(__dirname, './src/services'),
       '@/context': path.resolve(__dirname, './src/context')
     }
   }

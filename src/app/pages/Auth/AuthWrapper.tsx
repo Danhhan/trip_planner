@@ -1,4 +1,7 @@
 import React from 'react'
+// COMPs
+import { Flex } from '@/app/components/Box'
+import Container from '@/app/components/Layout/Container'
 
 interface AuthWrapperProps {
   children: React.ReactNode
@@ -6,9 +9,11 @@ interface AuthWrapperProps {
 
 const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
   return (
-    <div className="flex items-center h-screen">
-      <div className="max-w-[456px] mx-auto">{children}</div>
-    </div>
+    <Container height="100vh">
+      <Flex className="flex-col justify-center max-w-[456px]" height="100%" mx="auto">
+        {children}
+      </Flex>
+    </Container>
   )
 }
 

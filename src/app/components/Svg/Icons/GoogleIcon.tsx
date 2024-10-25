@@ -1,8 +1,10 @@
 import React from 'react'
+import Svg from '../Svg'
+import { SvgProps } from '../type'
 
-export const GoogleIcon: React.FC = () => {
+const Icon: React.FC<SvgProps> = props => {
   return (
-    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <Svg viewBox="0 0 24 25" {...props}>
       <mask id="mask0_1303_29165" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="21">
         <path
           fillRule="evenodd"
@@ -50,6 +52,8 @@ export const GoogleIcon: React.FC = () => {
       <g mask="url(#mask3_1303_29165)">
         <path d="M23.3953 23.409L8.97668 12.4999L7.11621 11.1363L23.3953 6.59082V23.409Z" fill="#4285F4" />
       </g>
-    </svg>
+    </Svg>
   )
 }
+
+export default Icon
